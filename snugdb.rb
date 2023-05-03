@@ -8,14 +8,16 @@ class Snugdb < Formula
   depends_on "cmake" => :build
 
   def install
-    system "cmake", ".", *std_cmake_args
-    system "make"
-    bin.install "snugdb_server"
-    bin.install "snugdb_cli"
+    mkdir "build" do
+      system "cmake", "..", *std_cmake_args
+      system "make"
+      bin.install "snugdb-cli"
+      bin.install "snugdb-server"
+    end
   end
 
   test do
-    system "#{bin}/snugdb_server", "--version"
-    system "#{bin}/snugdb_cli", "--version"
+    system "#{bin}/snugdb-cli", "--version"
+    system "#{bin}/snugdb-server", "--version"
   end
 end
