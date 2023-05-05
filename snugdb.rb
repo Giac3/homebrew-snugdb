@@ -1,8 +1,8 @@
 class Snugdb < Formula
   desc "SnugDB: A fun, simple, and local document database"
   homepage "https://github.com/Giac3/snugdb"
-  url "https://github.com/Giac3/snugdb/archive/v0.0.4-alpha.tar.gz"
-  sha256 "af038d601faef78cd4f232dc0635a5f2cdfc7229d4b22b32e8162d852363e543"
+  url "https://github.com/Giac3/snugdb/archive/v0.0.5-alpha.tar.gz"
+  sha256 "5b3a218311f1415a0cc111e03216e3ff90168807e1a8fcb51502db1ff48b672e"
   license "MIT"
 
   depends_on "cmake" => :build
